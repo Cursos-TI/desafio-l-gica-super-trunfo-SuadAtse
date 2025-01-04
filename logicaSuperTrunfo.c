@@ -61,68 +61,104 @@ int main() {
     pib_per_capita2 = pib2/populacao2;
 
     printf("/////////////////////////////////////////////\n");
+    int opcao;
+    printf("Digite a opção que você gostaria que fosse comparada:\n");
+    printf("1 = população\n");
+    printf("2 = Pontos Turísticos\n");
+    printf("3 = PIB\n");
+    printf("4 = Área\n");
+    printf("5 = Densidade Populacional\n");
+    printf("6 = PIB per capita\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
 
-    if (populacao1 > populacao2){
-        printf("A cidade de %s possue maior População.\n",nome_da_cidade1);
-    }else if (populacao2 > populacao1){
-        printf("A cidade de %s possue maior População.\n",nome_da_cidade2);
-    }else{
-        printf("As cidades tem o mesmo número de População.\n");
+    switch (opcao) {
+        case 1:
+
+            if (populacao1 > populacao2){
+                printf("A cidade de %s possue maior População.\n",nome_da_cidade1);
+            }else if (populacao2 > populacao1){
+                printf("A cidade de %s possue maior População.\n",nome_da_cidade2);
+            }else{
+                printf("As cidades tem o mesmo número de População.\n");
+            }
+            printf("                                    ");
+            break;
+
+        case 2:
+
+            if (pontos_turisticos1 > pontos_turisticos2){
+                printf("A cidade de %s possue mais Pontos Turísticos.\n",nome_da_cidade1);
+            }else if (pontos_turisticos2 > pontos_turisticos1){
+                printf("A cidade de %s possue maior Pontos Turísticos.\n",nome_da_cidade2);
+            }else{
+                printf("As cidades tem o mesmo número de Pontos Turísticos.\n");
+            }
+            printf("                                    ");
+
+            break;
+
+        case 3:
+
+            if (pib1 > pib2){
+                printf("A cidade de %s possue maior PIB.\n",nome_da_cidade1);
+            }else if (pib2 > pib1){
+                printf("A cidade de %s possue maior PIB.\n",nome_da_cidade2);
+            }else{
+                printf("As cidades tem o mesmo número de PIB.\n");
+            }
+
+            printf("                                    ");
+
+            break;
+
+        case 4:
+
+            if (area1 > area2){
+                printf("A cidade de %s possue maior Área.\n",nome_da_cidade1);
+            }else if (area2 > area1){
+                printf("A cidade de %s possue maior Área.\n",nome_da_cidade2);
+            }else{
+                printf("As cidades tem o mesmo número de Área.\n");
+            }
+
+            printf("                                    ");
+
+            break;
+
+        case 5:
+
+            if (densidade_populacional2 < densidade_populacional1){
+                printf("A cidade de %s vence por ter a densidade populacional menor.\n",nome_da_cidade2);
+            }else if(densidade_populacional1 < densidade_populacional2){
+                printf("A cidade de %s vence por ter a densidade populacional menor.\n",nome_da_cidade1);
+            }else{
+                printf("As cidades possuem o mesmo valor de densidade populacional.\n");
+            }
+
+            printf("                                    ");
+
+            break;
+
+        case 6:
+
+            if (pib_per_capita1 > pib_per_capita2){
+                printf("A cidade de %s possue maior PIB per capita.\n",nome_da_cidade1);
+            }else if (pib_per_capita2 > pib_per_capita1){
+                printf("A cidade de %s possue maior PIB per capita.\n",nome_da_cidade2);
+            }else{
+                printf("AS cidades tem o mesmo número de PIB per capita.\n");
+            }
+
+            printf("                                    ");
+
+            break;
+
+        default:
+            printf("Opção Inválida. Tente Novamente.\n");
+            printf("                                    ");
     }
-
-    printf("                                             \n");
-
-    if (pontos_turisticos1 > pontos_turisticos2){
-        printf("A cidade de %s possue mais Pontos Turísticos.\n",nome_da_cidade1);
-    }else if (pontos_turisticos2 > pontos_turisticos1){
-        printf("A cidade de %s possue maior Pontos Turísticos.\n",nome_da_cidade2);
-    }else{
-        printf("As cidades tem o mesmo número de Pontos Turísticos.\n");
-    }
-
-    printf("                                             \n");
-
-    if (pib1 > pib2){
-        printf("A cidade de %s possue maior PIB.\n",nome_da_cidade1);
-    }else if (pib2 > pib1){
-        printf("A cidade de %s possue maior PIB.\n",nome_da_cidade2);
-    }else{
-        printf("As cidades tem o mesmo número de PIB.\n");
-    }
-
-    printf("                                             \n");
-
-    if (area1 > area2){
-        printf("A cidade de %s possue maior Área.\n",nome_da_cidade1);
-    }else if (area2 > area1){
-        printf("A cidade de %s possue maior Área.\n",nome_da_cidade2);
-    }else{
-        printf("As cidades tem o mesmo número de Área.\n");
-    }
-
-    printf("                                             \n");
-
-    if (densidade_populacional2 < densidade_populacional1){
-        printf("A cidade de %s vence por ter a densidade populacional menor.\n",nome_da_cidade2);
-    }
-    else if(densidade_populacional1 < densidade_populacional2){
-        printf("A cidade de %s vence por ter a densidade populacional menor.\n",nome_da_cidade1);
-    }
-    else{
-        printf("As cidades possuem o mesmo valor de densidade populacional.\n");
-    }
-
-    printf("                                             \n");
-
-    if (pib_per_capita1 > pib_per_capita2){
-        printf("A cidade de %s possue maior PIB per capita.\n",nome_da_cidade1);
-    }else if (pib_per_capita2 > pib_per_capita1){
-        printf("A cidade de %s possue maior PIB per capita.\n",nome_da_cidade2);
-    }else{
-        printf("AS cidades tem o mesmo número de PIB per capita.\n");
-    }
-
-    printf("                                             \n");
+    
 
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
